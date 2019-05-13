@@ -5,18 +5,22 @@
 
 // Mehtoden des colaautomaten
 
+
+// Methode zum Fuellen mit Anzahl Dosen
 void Colaautomat::fuellen(int anzahl)
 {
 	anzahlDosen = anzahl;
 }
 
+
+// Methode zum Anzeigen der Anzahl Dosen
 void Colaautomat::zeigeAnzahlDosen()
 {
-
 	std::cout << "Die Menge der Dosen im Automat ist: " << anzahlDosen << std::endl;
-
 }
 
+
+// Methode zum Geldeinwurf und Ausgabe
 void Colaautomat::geldEinwerfen(float geldeinwurf)
 {
 	if (anzahlDosen > 1)

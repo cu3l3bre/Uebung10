@@ -63,9 +63,8 @@ int main()
 	ca1.zeigeAnzahlDosen();
 
 
-
-
 	cout << endl << endl;
+
 
 
 	// Aufgabe 2
@@ -73,16 +72,16 @@ int main()
 	Bankkonto meinKonto;
 
 	meinKonto.setzeKontonummer(1234567890);
+
 	meinKonto.setzeGeldBetrag(0);
 	
 	//meinKonto.zeigeGeldBetrag(); // ist zum test als privat deklariert, dh ich kann die so nicht nutzen
 
 
-
 	meinKonto.geldEinzahlen(200);
 	meinKonto.geldAbheben(50);
 	meinKonto.geldEinzahlen(30.50);
-	meinKonto.geldAbheben(200);
+	meinKonto.geldAbheben(190);
 
 	system("pause");
 	return 0;

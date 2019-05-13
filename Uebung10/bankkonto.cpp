@@ -11,9 +11,15 @@
 // Methode zum Anzeigen des akutllen Geldbetrages in der Konsole
 void Bankkonto::zeigeGeldBetrag()
 {
-	std::cout << "Der aktuelle Geldbetrag lautet: " << geldBetrag << std::endl;
+	std::cout << "Der aktuelle Geldbetrag lautet: " << geldBetrag << std::endl << std::endl;;
 }
 
+
+// Methode zum Anzeigen der Kontonummer in der Konsole
+void Bankkonto::zeigeKontonummer()
+{
+	std::cout << "Die Kontonummer lautet: " << kontoNummer << std::endl;
+}
 
 
 
@@ -22,10 +28,11 @@ void Bankkonto::zeigeGeldBetrag()
 //**********************************************************************************
 
 
-// Methode zum Setzen der Kontonummer
-void Bankkonto::setzeKontonummer(int nummer)
+// Methode zum Setzen der Kontonummer // TODO sollte man die klasse vor eine variable davor schreiben?
+void Bankkonto::setzeKontonummer(int kontoNummer)
 {
-	kontoNummer = nummer;
+	Bankkonto::kontoNummer = kontoNummer;
+	zeigeKontonummer();
 }
 
 
@@ -33,13 +40,7 @@ void Bankkonto::setzeKontonummer(int nummer)
 void Bankkonto::setzeGeldBetrag(float betrag)
 {
 	geldBetrag = betrag;
-}
-
-
-// Methode zum Anzeigen der Kontonummer in der Konsole
-void Bankkonto::zeigeKontonummer()
-{
-	std::cout << "Die Kontonummer lautet: "  << kontoNummer << std::endl;
+	zeigeGeldBetrag();
 }
 
 

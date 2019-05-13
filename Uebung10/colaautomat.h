@@ -1,8 +1,6 @@
 #pragma once
 
 
-
-
 class Colaautomat
 {
 	// Attribute des Automaten
