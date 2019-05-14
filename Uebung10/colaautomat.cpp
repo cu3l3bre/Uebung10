@@ -9,7 +9,7 @@
 // Methode zum Fuellen mit Anzahl Dosen
 void Colaautomat::fuellen(int anzahl)
 {
-	anzahlDosen = anzahl;
+	Colaautomat::anzahlDosen = anzahl;
 }
 
 
@@ -20,16 +20,26 @@ void Colaautomat::zeigeAnzahlDosen()
 }
 
 
+// Methode zum Anzeigen der Anzahl Dosen
+// TODO wahrscheinlich übertrieben dafür exra ne methode zu machen
+void Colaautomat::dekrementiereAnzahl()
+{
+	anzahlDosen--;
+}
+
+
+
 // Methode zum Geldeinwurf und Ausgabe
 void Colaautomat::geldEinwerfen(float geldeinwurf)
 {
-	if (anzahlDosen > 1)
+	if (anzahlDosen > 0)
 	{
 
 		if (geldeinwurf == preis)
 		{
 			std::cout << "Ausgabe erfolgt" << std::endl;
-			anzahlDosen = anzahlDosen - 1;
+			anzahlDosen--;
+			//dekrementiereAnzahl();
 
 		}
 		else if (geldeinwurf < preis)
@@ -39,7 +49,8 @@ void Colaautomat::geldEinwerfen(float geldeinwurf)
 		else
 		{
 			std::cout << "Ausgabe erfolgt! Ihr Restbetrag ist: " << (geldeinwurf - preis) << " Euro." << std::endl;
-
+			anzahlDosen--;
+			//dekrementiereAnzahl();
 		}
 	}
 	else

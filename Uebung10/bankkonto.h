@@ -14,6 +14,8 @@ private:
 
 public:
 
+	void bankkonto();
+
 	void setzeKontonummer(int);
 	void setzeGeldBetrag(float);
 

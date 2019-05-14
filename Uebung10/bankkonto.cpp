@@ -27,8 +27,21 @@ void Bankkonto::zeigeKontonummer()
 // public Methoden
 //**********************************************************************************
 
+// Main Methode der Bankkonto-Klassen
+void Bankkonto::bankkonto()
+{
+	 Bankkonto::setzeKontonummer(1234567890);
+	 Bankkonto::setzeGeldBetrag(0);
+	 Bankkonto::geldEinzahlen(200);
+	 Bankkonto::geldAbheben(50);
+	 Bankkonto::geldEinzahlen(30.50);
+	 Bankkonto::geldAbheben(190);
+}
 
-// Methode zum Setzen der Kontonummer // TODO sollte man die klasse vor eine variable davor schreiben?
+
+
+// Methode zum Setzen der Kontonummer 
+// TODO sollte man die klasse vor eine variable davor schreiben?
 void Bankkonto::setzeKontonummer(int kontoNummer)
 {
 	Bankkonto::kontoNummer = kontoNummer;

@@ -31,9 +31,6 @@ meinKonto.geldAbheben(500); //Hier sollte eine Meldung kommen...
 
 std::system("pause");
 
-
-
-
 */
 
 #include <iostream>
@@ -53,13 +50,19 @@ int main()
 	// Aufgabe 1 
 	Colaautomat ca1;
 
-	ca1.anzahlDosen = 0;
+	ca1.anzahlDosen = 3;
 
 	ca1.zeigeAnzahlDosen();
-	ca1.fuellen(0);
+
+	//ca1.fuellen(ca1.anzahlDosen);
+	//so wäre das ja deoppelt gemoppelt mit zeile 53, wo der wert der variable
+	// direkt gesetzt wird
+	
+	
+	ca1.fuellen(1);
 	ca1.zeigeAnzahlDosen();
 
-	ca1.geldEinwerfen(0.9);
+	ca1.geldEinwerfen(1.2);
 	ca1.zeigeAnzahlDosen();
 
 
@@ -75,13 +78,17 @@ int main()
 
 	meinKonto.setzeGeldBetrag(0);
 	
-	//meinKonto.zeigeGeldBetrag(); // ist zum test als privat deklariert, dh ich kann die so nicht nutzen
+	//meinKonto.zeigeGeldBetrag(); // ist zum test als privat deklariert, dh ich kann die hier so nicht nutzen
 
 
 	meinKonto.geldEinzahlen(200);
 	meinKonto.geldAbheben(50);
 	meinKonto.geldEinzahlen(30.50);
 	meinKonto.geldAbheben(190);
+
+
+	//meinKonto.bankkonto();	// könnte man alles auch in eine art main function der klasse machen 
+
 
 	system("pause");
 	return 0;
