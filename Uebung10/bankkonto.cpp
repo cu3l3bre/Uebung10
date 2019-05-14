@@ -42,6 +42,8 @@ void Bankkonto::bankkonto()
 
 // Methode zum Setzen der Kontonummer 
 // TODO sollte man die klasse vor eine variable davor schreiben?
+// kann man, muss man nicht in generell
+// aber hier hab ich das mal so gemacht weil ich den name kontoNummer 2 mal benutze für unterschiedeliche Variablen
 void Bankkonto::setzeKontonummer(int kontoNummer)
 {
 	Bankkonto::kontoNummer = kontoNummer;

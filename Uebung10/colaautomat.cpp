@@ -5,7 +5,6 @@
 
 // Mehtoden des colaautomaten
 
-
 // Methode zum Fuellen mit Anzahl Dosen
 void Colaautomat::fuellen(int anzahl)
 {
