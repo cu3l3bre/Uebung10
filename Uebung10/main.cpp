@@ -71,7 +71,57 @@ int main()
 
 
 	// Aufgabe 2
+	char anwendungweiter = 'j';
+	int eingabekontonummer = 0;
+	int IndexKonto = 0;
+	const int AnzahlKonten = 2;
 
+	
+	Bankkonto konto[AnzahlKonten];
+
+	konto[0].setzeBesitzername("Max");
+	konto[0].setzeKontonummer(1111);
+	konto[0].setzeGeldBetrag(100);
+
+	konto[1].setzeBesitzername("Maxine");
+	konto[1].setzeKontonummer(2222);
+	konto[1].setzeGeldBetrag(100);
+
+
+	cout << "Bitte melden Sie sich mit Ihrer Kontonummer an:";
+
+	//while (anwendungweiter == 'j')
+	//{
+	cin >> eingabekontonummer;
+
+	/*int id = 0;
+	id = konto[1].findeKontonummer(eingabekontonummer,konto);
+
+	cout << "ID ist: " << id << endl;*/
+
+	for (int i = 0; i < AnzahlKonten; i++)
+	{
+		if (konto[i].liefereKontonummer() == eingabekontonummer)
+		{
+			cout << "Hallo " << konto[i].getName() << endl;
+			konto[i].zeigeNamen();
+
+		}
+
+	}
+
+		
+
+
+
+
+
+	//}
+
+
+
+
+	
 	Bankkonto meinKonto;
 
 	meinKonto.setzeKontonummer(1234567890);

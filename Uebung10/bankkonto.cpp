@@ -21,6 +21,11 @@ void Bankkonto::zeigeKontonummer()
 	std::cout << "Die Kontonummer lautet: " << kontoNummer << std::endl;
 }
 
+int Bankkonto::liefereKontonummer()
+{
+	return kontoNummer;
+}
+
 
 
 //**********************************************************************************
@@ -30,7 +35,7 @@ void Bankkonto::zeigeKontonummer()
 // Main Methode der Bankkonto-Klassen
 void Bankkonto::bankkonto()
 {
-	 Bankkonto::setzeKontonummer(1234567890);
+	 setzeKontonummer(1234567890);
 	 Bankkonto::setzeGeldBetrag(0);
 	 Bankkonto::geldEinzahlen(200);
 	 Bankkonto::geldAbheben(50);
@@ -57,6 +62,22 @@ void Bankkonto::setzeGeldBetrag(float betrag)
 	geldBetrag = betrag;
 	zeigeGeldBetrag();
 }
+
+
+
+// Methode zum Setzen eines Names fuer den Besitzer des Kontos
+void Bankkonto::setzeBesitzername(std::string Name)
+{
+	NameBesitzer = Name;
+}
+
+
+void Bankkonto::zeigeNamen()
+{
+	std::cout << NameBesitzer << std::endl;
+
+}
+
 
 
 // Methode zum Einzahlen eines Geldbetrages
@@ -87,3 +108,26 @@ void Bankkonto::geldAbheben(float abhebung)
 	}
 }
 
+
+int Bankkonto::findeKontonummer(int eingabekontonummer, Bankkonto* Konten)
+{
+	int id = 0;
+
+	for (int i = 0; i < MAX_KONTEN; i++)
+	{
+		if (Konten[i].kontoNummer == eingabekontonummer)
+		{
+			id = i;
+
+		}
+
+	}
+	return id;
+}
+
+
+
+std::string Bankkonto::getName()
+{
+	return NameBesitzer;
+}
