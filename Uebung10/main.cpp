@@ -71,13 +71,15 @@ int main()
 
 
 	// Aufgabe 2
-	char anwendungweiter = 'j';
-	int eingabekontonummer = 0;
-	int IndexKonto = 0;
 	const int AnzahlKonten = 2;
 
+	char anwendungweiter = 'j';
+	int eingabekontonummer = 0;
+	int auswahl = 0;
+	int IndexKonto = 0;
 	
 	Bankkonto konto[AnzahlKonten];
+
 
 	konto[0].setzeBesitzername("Max");
 	konto[0].setzeKontonummer(1111);
@@ -99,19 +101,38 @@ int main()
 
 	cout << "ID ist: " << id << endl;*/
 
+
+
 	for (int i = 0; i < AnzahlKonten; i++)
 	{
-		if (konto[i].liefereKontonummer() == eingabekontonummer)
+		if (konto[i].getKontonummer() == eingabekontonummer)
 		{
-			cout << "Hallo " << konto[i].getName() << endl;
-			konto[i].zeigeNamen();
-
+			cout << "Konto wurde gefunden!" << endl;
+			IndexKonto = i;
 		}
 
 	}
 
-		
 
+	cout << "Hallo " << konto[IndexKonto].getName() << endl;
+	cout << "Was moechtest du tun?" << endl;
+	cout << "1) Kontostand abfragen" << endl;
+	cout << "2) Geld abheben" << endl;
+	cout << "3) Geld einzahlen" << endl;
+	cout << "4) Sitzung beenden" << endl;
+	cout << "Treffen Sie eine Auswahl: ";
+	cin >> auswahl;
+
+		
+	switch (auswahl)
+	{
+	case 1: konto[IndexKonto].menueKontostandAbfragen(); break;
+	case 2: konto[IndexKonto].menueGeldAbheben(); break;
+	case 3: konto[IndexKonto].menueGeldEinzahlen(); break;
+	case 4: break;
+	default:
+		break;
+	}
 
 
 

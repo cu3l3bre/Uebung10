@@ -21,10 +21,6 @@ void Bankkonto::zeigeKontonummer()
 	std::cout << "Die Kontonummer lautet: " << kontoNummer << std::endl;
 }
 
-int Bankkonto::liefereKontonummer()
-{
-	return kontoNummer;
-}
 
 
 
@@ -71,7 +67,7 @@ void Bankkonto::setzeBesitzername(std::string Name)
 	NameBesitzer = Name;
 }
 
-
+// Methode zum Anzeigen des Besitzers des Kontos
 void Bankkonto::zeigeNamen()
 {
 	std::cout << NameBesitzer << std::endl;
@@ -126,8 +122,46 @@ int Bankkonto::findeKontonummer(int eingabekontonummer, Bankkonto* Konten)
 }
 
 
-
+// Methode zum Getten des Names des Besitzers
 std::string Bankkonto::getName()
 {
 	return NameBesitzer;
+}
+
+
+// Methode zum Getten der Kontonummer
+int Bankkonto::getKontonummer()
+{
+	return kontoNummer;
+}
+
+
+
+
+void Bankkonto::menueKontostandAbfragen()
+{
+	std::cout << "Konotstand abfragen" << std::endl;
+	zeigeGeldBetrag();
+}
+
+
+
+void Bankkonto::menueGeldAbheben()
+{
+	float eingabeGeldbetrag = 0.0;
+	std::cout << "Geld abheben" << std::endl;
+	std::cout << "Wieviel moechtest du abheben?: ";
+	std::cin >> eingabeGeldbetrag;
+	geldAbheben(eingabeGeldbetrag);
+}
+
+
+void Bankkonto::menueGeldEinzahlen()
+{
+	float eingabeGeldbetrag = 0.0;
+	std::cout << "Geld einzahlen" << std::endl;
+	std::cout << "Wieviel moechtest du einzahlen?: ";
+	std::cin >> eingabeGeldbetrag;
+	geldEinzahlen(eingabeGeldbetrag);
+
 }

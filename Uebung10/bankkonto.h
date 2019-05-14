@@ -17,8 +17,14 @@ public:
 
 	void bankkonto();
 
+	void menueKontostandAbfragen();
+	void menueGeldAbheben();
+	void menueGeldEinzahlen();
+	//void menueGeldAbheben();
+
+
 	void zeigeKontonummer();
-	int liefereKontonummer();
+	int getKontonummer();
 	void zeigeGeldBetrag();
 	void zeigeNamen();
 
