@@ -105,6 +105,7 @@ int main()
 		}
 	}
 
+	// TODO keine Abfrage auf ungueltige Kontonummer -> noch zu machen
 
 	while (anwendungweiter != 'j')
 	{

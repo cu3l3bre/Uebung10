@@ -29,6 +29,7 @@ void Bankkonto::zeigeKontonummer()
 //**********************************************************************************
 
 // Main Methode der Bankkonto-Klassen
+// Keine Ahnung ob das so in dieser Form mal sinnvoll ist 
 void Bankkonto::bankkonto()
 {
 	 setzeKontonummer(1234567890);
