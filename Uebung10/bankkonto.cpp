@@ -165,3 +165,12 @@ void Bankkonto::menueGeldEinzahlen()
 	geldEinzahlen(eingabeGeldbetrag);
 
 }
+
+char Bankkonto::menueSitzungBeenden()
+{
+	char benutzerEingabe = 'n';
+	std::cout << "Sitzung beebden" << std::endl;
+	std::cout << "Moechtest du die Siztung wirklich beenden?[j,n]: ";
+	std::cin >> benutzerEingabe;
+	return benutzerEingabe;
+}

@@ -20,7 +20,7 @@ public:
 	void menueKontostandAbfragen();
 	void menueGeldAbheben();
 	void menueGeldEinzahlen();
-	//void menueGeldAbheben();
+	char menueSitzungBeenden();
 
 
 	void zeigeKontonummer();

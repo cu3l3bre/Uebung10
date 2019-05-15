@@ -71,9 +71,11 @@ int main()
 
 
 	// Aufgabe 2
+	// TODO Menu verbessern, Programm aufräumen, quasi schick machen 
+
 	const int AnzahlKonten = 2;
 
-	char anwendungweiter = 'j';
+	char anwendungweiter = 'n';
 	int eingabekontonummer = 0;
 	int auswahl = 0;
 	int IndexKonto = 0;
@@ -91,16 +93,7 @@ int main()
 
 
 	cout << "Bitte melden Sie sich mit Ihrer Kontonummer an:";
-
-	//while (anwendungweiter == 'j')
-	//{
 	cin >> eingabekontonummer;
-
-	/*int id = 0;
-	id = konto[1].findeKontonummer(eingabekontonummer,konto);
-
-	cout << "ID ist: " << id << endl;*/
-
 
 
 	for (int i = 0; i < AnzahlKonten; i++)
@@ -110,38 +103,41 @@ int main()
 			cout << "Konto wurde gefunden!" << endl;
 			IndexKonto = i;
 		}
-
 	}
 
 
-	cout << "Hallo " << konto[IndexKonto].getName() << endl;
-	cout << "Was moechtest du tun?" << endl;
-	cout << "1) Kontostand abfragen" << endl;
-	cout << "2) Geld abheben" << endl;
-	cout << "3) Geld einzahlen" << endl;
-	cout << "4) Sitzung beenden" << endl;
-	cout << "Treffen Sie eine Auswahl: ";
-	cin >> auswahl;
-
-		
-	switch (auswahl)
+	while (anwendungweiter != 'j')
 	{
-	case 1: konto[IndexKonto].menueKontostandAbfragen(); break;
-	case 2: konto[IndexKonto].menueGeldAbheben(); break;
-	case 3: konto[IndexKonto].menueGeldEinzahlen(); break;
-	case 4: break;
-	default:
-		break;
+
+	
+
+		cout << "Hallo " << konto[IndexKonto].getName() << endl;
+		cout << "Was moechtest du tun?" << endl;
+		cout << "1) Kontostand abfragen" << endl;
+		cout << "2) Geld abheben" << endl;
+		cout << "3) Geld einzahlen" << endl;
+		cout << "4) Sitzung beenden" << endl;
+		cout << "Treffen Sie eine Auswahl: ";
+		cin >> auswahl;
+
+		system("cls");
+
+		switch (auswahl)
+		{
+		case 1: konto[IndexKonto].menueKontostandAbfragen(); break;
+		case 2: konto[IndexKonto].menueGeldAbheben(); break;
+		case 3: konto[IndexKonto].menueGeldEinzahlen(); break;
+		case 4: anwendungweiter = konto[IndexKonto].menueSitzungBeenden(); break;
+		default:
+			break;
+		}
+
+
 	}
 
 
 
-
-	//}
-
-
-
-
+	/*
 	
 	Bankkonto meinKonto;
 
@@ -160,6 +156,7 @@ int main()
 
 	//meinKonto.bankkonto();	// könnte man alles auch in eine art main function der klasse machen 
 
+	*/
 
 	system("pause");
 	return 0;
